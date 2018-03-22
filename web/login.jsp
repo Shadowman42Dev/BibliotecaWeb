@@ -8,27 +8,48 @@
     </head>
 
     <body>
+     <%@include file="Navbar.jsp" %>
         <div class="container">
             <div class="row">
-                <div class="input-field col s12">
-                    <label>Materialize Select</label>
-                    <select class="browser-default">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>            
-                </div>
+                <div class="col s12">
+                    <blockquote>
+                        <h4>Inicion de Sesion</h4>
+                    </blockquote>                            
+                </div>     
+                <form class="col s8 push-s2">
+                    <div class="row">
+        <div class="input-field col  s12">
+          <input id="us" type="text" class="validate">
+          <label for="us" >Usuario</label>
+        </div>
+      </div>
+        <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+         <div class="row">
+                        <button class="btn waves-effect waves-light col s12" type="submit" name="action">
+                            Aceptar<i class="material-icons right">send</i>
+                        </button>
+                    </div>
+    </form>
             </div>
         </div>
-
+        <%@include  file="Footer.jsp"%>
+    </body>
         <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    
         <script type="text/javascript">
             $(document).ready(function () {
                 $('select').select();
             });
         </script>
-    </body>
+        <script type="text/javascript">
+        $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+    </script>
 </html>
